@@ -22,7 +22,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You group regular variables definitions under `vars` helper which supports handy syntax
+
+```ruby
+RSpec.describe 'Subject' do
+  vars do
+    variant_id { variant.id } # let(:variant_id) { variant.id }
+    issue_id { issue.id }
+    issue_message { 'Packed 5 instead of 3 items' }
+    item_id { item.id }
+    mispick_report { MispickReport.last }
+  end
+
+  it 'has access to variables' do
+    # You can call variables here
+  end
+end
+```
 
 ## Development
 
