@@ -19,6 +19,18 @@ And then execute:
 Or install it yourself as:
 
     $ gem install rspec_vars_helper
+    
+## Configuration
+
+Include helpers into RSpec
+
+```ruby
+# spec/rails_helper.rb
+
+RSpec.configure do |config|
+  config.include RspecVarsHelper
+end
+```
 
 ## Usage
 
